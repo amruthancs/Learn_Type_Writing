@@ -1,0 +1,255 @@
+<head>
+    <style>
+        .keys{
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid #43a7dc;
+    color: white;
+    cursor: default;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+}
+.keyboardstruct{
+    display:flex;
+    justify-content: center;
+    padding: 5px;
+}
+.textboxP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+}
+#text
+{
+    height: 160px;
+    width: 500px;
+    word-spacing: 5px;
+    line-height: 18px;
+    padding: 10px;
+    resize: none;
+    border-radius: 20px;
+    background-color: #43a7dc;
+}
+.textarea
+{
+    position: absolute;
+    background: transparent;
+    height: 180px;
+    width: 520px;
+    padding: 10px;
+    resize: none;
+    border-radius: 20px;
+    border-color: transparent;
+}
+#ch{
+    padding-left: 225px;
+    padding-right: 225px;
+}
+header{
+    display: flex;
+    height: 50px;
+    background: gold;
+    justify-content: center;
+}
+#wpm,#acc{
+    padding: 5px;
+    margin: auto;
+    border-radius: 10px;
+    background: gold;
+    margin-bottom: 5px;
+}
+#calc{
+    display: grid;
+}
+h2{
+    margin: auto;
+}
+.alert {
+  padding: 20px;
+  background-color:crimson;
+  color: white;
+  margin: auto;
+  line-height: 30px;
+  height: 100px;
+    width: 300px;
+  text-align: center;
+    border-radius: 10px;
+position: absolute;
+top: 50px; left: 50px;
+bottom: 50px; right: 50px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color:aliceblue;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+        
+    </style>
+</head>
+<header>
+    <h2>Type Test</h2>
+</header>
+<div class="textboxP">
+    <textarea readonly class="textarea" onkeydown="myFunction(event)" autofocus></textarea>
+<div   id="text" >A debit card is a payment card that deducts money directly from a consumer's checking account when it is used. Also called check cards or bank cards, they can be used to buy goods or services; or to get cash from an automated teller machine or a merchant who'll let you add an extra amount onto a purchase. Debit cards eliminate the need to carry cash or physical checks to make purchases, and they can also be used at ATMs to withdraw cash. Debit cards usually have daily purchase limits, meaning it may not be possible to make an especially large purchase with a debit card.</div>
+
+</div>
+<div class="keyboardstruct">
+<div class="keyboard">
+    <i class="keys" id="ch`">`</i>
+    <i class="keys" id="ch1">1</i>
+    <i class="keys" id="ch2">2</i>
+    <i class="keys" id="ch3">3</i>
+    <i class="keys" id="ch4">4</i>
+    <i class="keys" id="ch5">5</i>
+    <i class="keys" id="ch6">6</i>
+    <i class="keys" id="ch7">7</i>
+    <i class="keys" id="ch8">8</i>
+    <i class="keys" id="ch9">9</i>
+    <i class="keys" id="ch0">0</i>
+    <i class="keys" id="ch-">-</i>
+    <i class="keys" id="ch=">=</i>
+    <i class="keys" id="chBACKSPACE">BACKSPACE</i>
+</br>
+    <i class="keys"id="chTAB">TAB</i>
+    <i class="keys" id="chQ">Q</i>
+<i class="keys" id="chW">W</i>
+<i class="keys" id="chE">E</i>
+<i class="keys" id="chR">R</i>
+<i class="keys" id="chT">T</i>
+<i class="keys" id="chY">Y</i>
+<i class="keys" id="chU">U</i>
+<i class="keys" id="chI">I</i>
+<i class="keys" id="chO">O</i>
+<i class="keys" id="chP">P</i>
+<i class="keys" id="ch[">[</i>
+<i class="keys" id="ch]">]</i>
+<i class="keys" id="ch\">\</i>
+
+</br>
+<i class="keys" id="chCAPS">CAPS</i>
+
+<i class="keys" id="chA">A</i>
+<i class="keys" id="chS">S</i>
+<i class="keys" id="chD">D</i>
+<i class="keys" id="chF">F</i>
+<i class="keys" id="chG">G</i>
+<i class="keys" id="chH">H</i>
+<i class="keys" id="chJ">J</i>
+<i class="keys" id="chK">K</i>
+<i class="keys" id="chL">L</i>
+<i class="keys" id="ch;">;</i>
+<i class="keys" id="ch'">'</i>
+
+<i class="keys" id="chENTER">ENTER</i>
+</br>
+<i class="keys" id="chSHIFT">SHIFT</i>
+<i class="keys" id="chZ">Z</i>
+<i class="keys" id="chX">X</i>
+<i class="keys" id="chC">C</i>
+<i class="keys" id="chV">V</i>
+<i class="keys" id="chB">B</i>
+<i class="keys" id="chN">N</i>
+<i class="keys" id="chM">M</i>
+<i class="keys" id="ch,">,</i>
+<i class="keys" id="ch.">.</i>
+<i class="keys" id="ch/">/</i>
+<i class="keys" id="chSHIFT">SHIFT</i>
+</br>
+<i class="keys" id="ch">SPACE BAR</i>
+</div>
+</div>
+<div id ='calc'>
+<div id='wpm'>
+    Words Per Minute is 0
+</div>
+<div id='acc'>
+Accuracy with respect to Typing speed is 0%
+</div>
+</div>
+
+<script>
+     let s = "A debit card is a payment card that deducts money directly from a consumer's checking account when it is used. Also called check cards or bank cards, they can be used to buy goods or services; or to get cash from an automated teller machine or a merchant who'll let you add an extra amount onto a purchase. Debit cards eliminate the need to carry cash or physical checks to make purchases, and they can also be used at ATMs to withdraw cash. Debit cards usually have daily purchase limits, meaning it may not be possible to make an especially large purchase with a debit card."
+      //let s = "type me to find out how many words per minute you can type";
+     //let s = "text is";
+      var i = 0,wpm=0,error=0,t=1;
+
+function timecalc()
+{
+    ++t;
+    if(i==s.length)
+    {
+        return;
+    }
+    setTimeout(timecalc,60000);
+}
+
+function myFunction(event) {
+    if(event.key.toUpperCase() === "SHIFT")
+    return;
+    window.onkeydown = function(e) {
+    return event.key !== " ";
+}
+  
+  var x = "ch"+event.key.toUpperCase();
+  x = x.trim(); 
+  var ch = event.key;
+  //alert("s --index"+s.charAt(i)+" "+event.key.toUpperCase());
+  if(i==0)
+  {
+    setTimeout(timecalc, 60000);
+  }
+ 
+  if(ch == s.charAt(i))
+  {
+       var value = "<span style='color:brown;'>"+s.slice(0,i+1)+"</span>"+s.substr(i+1);
+         console.log(i+"is i, t is "+t)
+       document.getElementById("wpm").innerHTML="Words Per Minute is "+((i/5)/t).toFixed(0);
+        
+       document.getElementById("acc").innerHTML="Accuracy with respect to Typing speed is "+((i-error)*100/i).toFixed(2)+" %";
+       document.getElementById("text").innerHTML=value;
+    document.getElementById(x).style.backgroundColor = 'white';
+    document.getElementById(x).style.color = 'black';
+    document.getElementById(x).style.borderColor = 'orange' ;
+  setTimeout(function(){
+   document.getElementById(x).style.backgroundColor = 'black';
+  document.getElementById(x).style.color = 'white';
+  document.getElementById(x).style.borderColor = 'black' ;
+}, 300);
+++i;
+if(i===s.length)
+    {
+    document.getElementById("text").innerHTML=s.substr();
+var popup = document.createElement("div");
+popup.innerHTML = "<div class='alert'><span class='closebtn' onclick=\"this.parentElement.style.display='none';\">&times;</span>Words Per Minute is <strong>"+((i/5)/t).toFixed(0)+"</strong></br>Accuracy with respect to Typing speed is <strong>"+((i-error)*100/i).toFixed(2)+" %</strong></div>";
+document.body.appendChild(popup);  
+    i=0;
+    }
+  }
+  else{
+    ++error;
+  document.getElementById(x).style.backgroundColor = 'red';
+  document.getElementById(x).style.color = 'black';
+  document.getElementById(x).style.borderColor = 'red' ;
+  setTimeout(function(){
+   document.getElementById(x).style.backgroundColor = 'black';
+  document.getElementById(x).style.color = 'white';
+  document.getElementById(x).style.borderColor = 'black' ;
+}, 300);
+  
+}
+}
+</script>
