@@ -1,4 +1,7 @@
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .keys{
     width: 46px;
@@ -95,6 +98,10 @@ bottom: 50px; right: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
+ .mobile{
+     display : none;
+        }
+            
 @media (max-width:600px)
     {
         
@@ -107,14 +114,20 @@ bottom: 50px; right: 50px;
         .calc{
             display:none;
         }
+        .mobile{
+            display : block;
+        }
     }
+        
         
     </style>
     <title>Type test</title>
 </head>
 <header>
-    <h2>Type Test <h3>Mobile View not supported</h3></h2>
+    <h2>Type Test</h2>
 </header>
+<div class="mobile">
+    Mobile View not supported</div>
 <div class="textboxP">
     <textarea readonly class="textarea" onkeydown="myFunction(event)" autofocus></textarea>
 <div   id="text" >A debit card is a payment card that deducts money directly from a consumer's checking account when it is used. Also called check cards or bank cards, they can be used to buy goods or services; or to get cash from an automated teller machine or a merchant who'll let you add an extra amount onto a purchase. Debit cards eliminate the need to carry cash or physical checks to make purchases, and they can also be used at ATMs to withdraw cash. Debit cards usually have daily purchase limits, meaning it may not be possible to make an especially large purchase with a debit card.</div>
