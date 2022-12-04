@@ -95,12 +95,25 @@ bottom: 50px; right: 50px;
   cursor: pointer;
   transition: 0.3s;
 }
-
+@media (max-width:600px)
+    {
+        
+        .keyboardtext{
+            display:none;
+        }
+        .textboxP{
+            display:none;
+        }
+        .calc{
+            display:none;
+        }
+    }
         
     </style>
+    <title>Type test</title>
 </head>
 <header>
-    <h2>Type Test</h2>
+    <h2>Type Test <h3>Mobile View not supported</h3></h2>
 </header>
 <div class="textboxP">
     <textarea readonly class="textarea" onkeydown="myFunction(event)" autofocus></textarea>
